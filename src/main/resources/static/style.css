@@ -1,7 +1,22 @@
+:root{
+
+    --color-fondo: #0a101b;
+    --color-1 : #2563EB;
+    --color-2 : #004cb5;
+    --color-3: #82b3e1;
+    --color-4: #6B7280;
+    --color-5: #001332;
+    --color-6: #F3F4F6;
+    --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --padding: 20px;
+    --margin: 20px;
+
+}
+
 body{
 
-    background-color: #1e1d1d;
-    font-family: Tahoma, Verdana,sans-serif;
+    background-color: var(--color-fondo);
+    font-family: var(--fuente);
 
     line-height: 1.6;
     margin: 10px 5px 4px 5px;
@@ -9,24 +24,41 @@ body{
 
 }
 
-h1{
-    color: rgb(60 128 252);
-}
+h1, h2{
 
-h2{
-    color: #82b3e1;
+    color: var(--color-1);
+    text-align: center;
+
 }
 
 h3{
-    color: white;
+
+   color: var(--color-2);
+
 }
+
 
 p{
     font-size: 16px;
     font-weight: 500;
-    background-color: #82b3e1;
+    background-color: var(--color-3);
     padding: 15px;
-    border-left: 4px solid #3274ec;
+    border-left: 4px solid var(--color-2);
+}
+
+.mi-supuesta-imagen{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
 }
 
 ol, ul{
@@ -40,62 +72,57 @@ ol, ul{
 
 }
 
+#introduccion{
 
-#presentacion{
-
-    background-color: rgb(50 48 48 / 1);
-
-    border: 1px solid rgb(255 255 255);
-
-    padding: 20px;
-
-    margin: 20px;
-
-    border-radius: 5px ;
-
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    overflow-x: auto;
 
 
 }
 
-#sobremi{
+#presentacion, #sobremi, #objetivos{
 
-    background-color: rgb(47 54 60);
 
-    border: 1px solid rgb(255 255 255);
+    height: 430px;
+    width: 400px;
 
-    padding: 20px;
+    background-color: var(--color-4);
 
-    margin: 20px;
+    border: 5px solid var(--color-3);
 
-    border-radius: 5px ;
+    padding: var(--padding);
+    margin: var(--margin);
+
+    border-radius: 10px;
+
+}
+
+.gif{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-#objetivos{
 
-    background-color: rgb(40 55 67);
-
-    border: 1px solid rgb(255 255 255);
-
-    padding: 20px;
-
-    margin: 20px;
-
-    border-radius: 5px ;
-
-}
 
 #historial\ academico{
 
-    background-color: rgb(27 51 69);
+    background-color: var(--color-4);
 
-    border: 1px solid rgb(255 255 255);
+    border: 5px solid var(--color-3);
 
-    padding: 20px;
+    padding: var(--padding);
+    margin: var(--margin);
+    margin-left: 100px;
+    margin-right: 100px;
 
-    margin: 20px;
-
-    border-radius: 5px ;
+    border-radius: 10px;
 
 }
 
@@ -118,44 +145,143 @@ ol, ul{
 
 .tablaChida td{
 
-    background-color: rgb(11 74 188);
-    color: white;
+    background-color: var(--color-2);
+    color: var(--color-3);
 
 }
 
 .tablaChida th{
 
-    background-color: rgb(74 126 216);
+    background-color: var(--color-3);
+    color: var(--color-2);
+
+}
+
+.texto-hobbies{
+
+    height: 100px;
+    width: auto;
+
+    background-color: var(--color-4);
+
+    border: 5px solid var(--color-3);
+
+    padding: var(--padding);
+    margin: var(--margin);
+
+    border-radius: 10px;
+
+}
+
+.videos-hobbies{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.navegacion{
+
+    gap: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-3);
+
+    border: 5px solid white;
+
+    padding: 20px;
+
+    margin: 20px;
+
+    border-radius: 10px ;
+
+     a{
+
+         display: inline-block;
+         color: var(--color-2);
+         text-decoration: none;
+         font-family: var(--fuente);
+         font-weight: 500;
+         padding: 8px 16px;
+         transition: all 0.3s ease;
+         border-radius: 6px;
+
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+     }
+
+}
+
+.navegacion a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
     color: white;
-
 }
 
-nav{
-
-    background-color: rgb(124 126 128);
-
-    border: 1px solid rgb(255 255 255);
-
-    padding: 20px;
-
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
     margin: 20px;
 
-    border-radius: 5px ;
 
-
-
+    background-color: var(--color-3);
+    border: 2px solid white;
+    border-radius: 8px;
 }
 
-#redes{
 
-    background-color: rgb(14 47 73);
+.redes h3 {
+    color: var(--color-2);
+    font-family: var(--fuente);
+    font-size: 20px;
+    margin: 0;
+}
 
-    border: 1px solid rgb(255 255 255);
 
-    padding: 20px;
+.botones {
+    display: flex;
+    gap: 15px;
+}
 
-    margin: 20px;
 
-    border-radius: 5px ;
+.GitHub, .Youtube {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuente);
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
+
+.GitHub {
+    background-color: #24292e;
+}
+.GitHub:hover {
+    background-color: var(--color-4);
+    transform: translateY(-2px);
+}
+
+
+.Youtube {
+    background-color: red;
+}
+.Youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
 }
